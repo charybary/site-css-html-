@@ -1,0 +1,217 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #2A2D36;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #0B0C10; /* Zmiana koloru tła nagłówka */
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Przeniesienie elementów na prawą stronę */
+    align-items: center;
+}
+
+header .logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Wyrównanie tekstu do prawej */
+}
+
+.title-line1,
+.title-line2 {
+    color: white;
+}
+
+.title-line1 {
+    font-size: 25px;
+}
+
+.main-header {
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    font-size: 32px;
+    font-weight: normal; /* Usunięcie pogrubienia */
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+}
+
+.underline::after {
+    content: '';
+    display: block;
+    width: 100%; /* Długość linii podkreślenia */
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    display: none; /* ukryte, bo "O mnie" zostało zastąpione */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a.active {
+    background-color: #666;
+}
+
+section {
+    padding: 20px;
+    flex: 1;
+}
+
+.block-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2A2D36; /* Zmiana koloru tła */
+    color: #fff; /* Dostosowanie koloru tekstu */
+    border: none; /* Usunięcie obramowania */
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkbox-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    background-color: #2A2D36;
+    margin: 5px;
+    flex: 1;
+    border: 2px solid white; /* Dodanie obramowania */
+}
+
+.checkbox-label:hover {
+    background-color: orange;
+}
+
+.checkbox-label input {
+    display: none;
+}
+
+.checkbox-label input:checked + span {
+    background-color: #2196F3;
+    color: white;
+}
+
+.block-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.block-description {
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0B0C10;
+    color: white;
+}
+
+.left {
+    text-align: left;
+}
+
+.left p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.center {
+    opacity: 0.5;
+}
+
+.right {
+    position: relative;
+}
+
+.right button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+.right button:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.right button::after {
+    content: "▼";
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    white-space: nowrap;
+    color: black;
+}
+
+.right button:hover + .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
